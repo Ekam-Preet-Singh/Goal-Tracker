@@ -1,22 +1,16 @@
 {
-  "name": "mern-tutorial",
+  "name": "mern-app",
   "version": "1.0.0",
-  "description": "Goalsetter app for youtube tutorial",
+  "description": "Goalsetter app ",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "npm run build:clean:client && npm run build:client:prod",
-    "build:server": "npm run build:clean:server && npm run build:server:prod",
-    "build:clean:client": "rimraf frontend/build",
-    "build:clean:server": "rimraf backend/dist",
-    "build:client:prod": "npm run --prefix frontend build",
-    "build:server:prod": "npm run --prefix backend build"
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "author": "Brad Traversy",
+  "author": "Ekam Preet Singh",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
